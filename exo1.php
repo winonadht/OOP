@@ -16,7 +16,7 @@ class beverage {
     }
     public function nameBeverage()
     {
-        echo "this $this->color $this->name that costs: $this->price is $this->temp";
+        echo "this $this->color $this->name that costs: $this->price $, is $this->temp";
     }
 }
 
