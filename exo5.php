@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 class beverage {
     private $name;
     private $color;

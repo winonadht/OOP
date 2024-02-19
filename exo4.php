@@ -6,6 +6,7 @@ class beverage {
    protected $color;
    protected $price;
    protected $temp;
+   public static $adress = "Melkmarkt 9, 2000 Anvers";
 
    public function __construct(string $name, string $color,float $price,string $temp = "cold"){
 

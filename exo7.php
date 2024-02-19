@@ -1,12 +1,14 @@
 <?php
 
 declare(strict_types=1);
+
 class beverage {
     private $name;
     private $color;
     private $price;
     private $temp;
     const bar = "Het Vervolg"; 
+ public static $address = "Melkmarkt 9, 2000 Anvers";
 
    public function __construct(string $name, string $color,float $price,string $temp = "cold", )
    {
@@ -15,6 +17,7 @@ class beverage {
         $this->color = $color;
         $this->price = $price;
         $this->temp = $temp;
+    
   
    }
 
@@ -50,6 +53,15 @@ class beverage {
     {
         return self::bar;
     }
+    public static function getAddressDirectly(): string
+    {
+        return self::$address;
+    }
+
+    public static function getAddressViaMethod(): string
+    {
+        return self::$address;
+    }
 }
 
 
@@ -83,7 +95,9 @@ public static function sayWelcome(): string
 }
 
 
+class adress extends beverage {
 
+}
 
 $beer1 = new beer("Jupiler", "blond", 8.5,"cold", 3);
 
@@ -94,4 +108,7 @@ $beer1->alcoholPercent();
 echo "welcome to the bar " . beverage::sayWelcome() . "<br>";
 
 echo "welcome to the bar " . beer::sayWelcome();
- 
+
+echo "Address accessed directly: " . beverage::$address . "<br>";
+
+echo "Address accessed via a static method: " . beverage::getAddressViaMethod() . "<br>";
